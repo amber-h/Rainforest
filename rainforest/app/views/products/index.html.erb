@@ -1,8 +1,10 @@
 <h1>Products (<%= @products.length %>)</h1>
 
-<%- @products.each do |product| %>
-<p> <%=product[:name]%>, <%= product[:description] %>, <%=product[:price_in_cents] %></p>
-<p> Price in dollars: <%= @product.formatted_price %></p>
-
-
+<% @products.each do |product| %>
+	<p>
+		<%= link_to product.name, product_path(product.id) %>, <%= product.description %>, <%=product.price_in_cents %>
+	</p>
+	<p>Price in dollars: <%= product.formatted_price %></p>
 <% end %>
+
+
