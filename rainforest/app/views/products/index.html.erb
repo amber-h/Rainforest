@@ -1,6 +1,6 @@
 <h1>Products (<%= @products.length %>)</h1>
 
 <%- @products.each do |product| %>
-<p><%= product[:description] %>, <%= product[:name] %>, <%=product[:price_in_cents] %></p>
+<p> <%=product[:name]%>, <%= product[:description] %>, <%=product[:price_in_cents] %></p>
  
 <% end %>
