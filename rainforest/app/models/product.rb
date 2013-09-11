@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  before_filter :ensure_logged_in, :only => [:show]
   attr_accessible :description, :name, :price_in_cents
 
   has_many :reviews
