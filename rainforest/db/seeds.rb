@@ -10,3 +10,4 @@ Product.create!(
     :name => "KitKat",
     :price_in_cents => "139"
   )
+
